@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    
+    <title>Calculate!</title>
+</head>
+<body>
+    <h1>Calculate Term mark</h1>
+    <div class="mark">
+        <div class="submit">
+            <p>Quiz: </p>
+            <input id="quiz" type="text" placeholder="Enter your grade" size="15" >%
+            <input id="quiz_per" type="text" placeholder="Enter quiz percentage" size="20" >%
+        </div>
+        
+        <div class="submit">
+            <p>Midterm 1: </p>
+            <input id="midterm" type="text" placeholder="Enter your grade" size="15" >%
+            <input id="midterm_per" type="text" placeholder="Enter midterm percentage" size="20" >%
+        </div>
+
+        <div class="submit">
+            <p>Midterm 2: </p>
+            <input id="midtermb" type="text" placeholder="Enter your grade" size="15" >%
+            <input id="midtermb_per" type="text" placeholder="Enter midterm percentage" size="20" >%
+        </div>
+        
+        <div class="submit">
+            <p>Assignment: </p>
+            <input id="assignment" type="text" placeholder="Enter your grade" size="15" >%
+            <input id="assignment_per" type="text" placeholder="Enter assignment percentage" size="20" >%
+        </div>
+        
+        <div class="submit">
+            <p>Lab: </p>
+            <input id="lab" type="text" placeholder="Enter your grade" size="15" >%
+            <input id="lab_per" type="text" placeholder="Enter lab percentage" size="20" >%
+        </div>
+
+        <div class="submit">
+            <p>Project: </p>
+            <input id="project" type="text" placeholder="Enter your grade" size="15" >%
+            <input id="project_per" type="text" placeholder="Enter lab percentage" size="20" >%
+        </div>
+        
+        <div class="submit">
+            <p>Attendance: </p>
+            <input id="attendance" type="text" placeholder="Enter your grade" size="15" >%
+            <input id="attendance_per" type="text" placeholder="Enter lab percentage" size="20" >%
+        </div>
+
+        <button id="button">Submit</button>
+        <div id="output_one"> </div>
+        <div id="output_two"> </div>
+        <div id="output_twob"> </div>
+        <div id="output_three"> </div>
+        <div id="output_four"> </div>
+        <div id="output_project"> </div>
+        <div id="output_fourb"> </div>
+        <div id="output_five">  </div>
+    </div>
+    
+
+    
+
+  
+
+
+    <script type="text/javascript">
+        button.onclick = function(){
+            var grade_one = quiz.value * (quiz_per.value/100);
+            var finalOutput_one = "Quiz: You get " + grade_one + "% out of " + quiz_per.value + "%";
+            output_one.innerHTML = finalOutput_one; 
+
+            var grade_two = midterm.value * (midterm_per.value/100);
+            var finalOutput_two = "Midterm: You get " + grade_two + "% out of " + midterm_per.value + "%";
+            output_two.innerHTML = finalOutput_two; 
+
+            var grade_twob = midtermb.value * (midtermb_per.value/100);
+            var finalOutput_twob = "Midterm: You get " + grade_two + "% out of " + midtermb_per.value + "%";
+            output_twob.innerHTML = finalOutput_twob; 
+
+            var grade_three = assignment.value * (assignment_per.value/100);
+            var finalOutput_three = "Assignment: You get " + grade_three + "% out of " + assignment_per.value + "%";
+            output_three.innerHTML = finalOutput_three; 
+
+            var grade_four = lab.value * (lab_per.value/100);
+            var finalOutput_four = "Lab: You get " + grade_four + "% out of " + lab_per.value + "%";
+            output_four.innerHTML = finalOutput_four;
+            
+            var grade_fourc = project.value * (project_per.value/100);
+            var finalOutput_fourc = "Lab: You get " + grade_fourc + "% out of " + project_per.value + "%";
+            output_project.innerHTML = finalOutput_fourc; 
+
+            var grade_fourb = attendance.value * (attendance_per.value/100);
+            var finalOutput_fourb = "Lab: You get " + grade_four + "% out of " + attendance_per.value + "%";
+            output_fourb.innerHTML = finalOutput_fourb; 
+            
+            var TotalTerm = Number(quiz_per.value) + Number(midterm_per.value) + Number(midtermb_per.value) + Number(assignment_per.value) + Number(lab_per.value) + Number(attendance_per.value) + Number(project_per.value);
+            var TermMark = "Your term mark is " + (grade_one + grade_two + grade_twob  + grade_three + grade_four + grade_fourb + grade_fourc) + "% out of " + TotalTerm + "%";
+            output_five.innerHTML = TermMark;
+
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+
+
+</body>
+</html>
